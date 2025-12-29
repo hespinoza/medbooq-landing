@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { ROUTES, ANCHORS, APP_INFO, APP_CONFIG } from '../config/constants';
 ---
 
 <Layout title="MedBooq - Software de gestión para clínicas">
@@ -13,18 +14,18 @@ import Layout from '../layouts/Layout.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
           </div>
-          <span class="text-xl font-semibold text-foreground">MedBooq</span>
+          <span class="text-xl font-semibold text-foreground">{APP_INFO.NAME}</span>
         </div>
         <nav class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
-          <a href="#clinicas" class="text-muted-foreground hover:text-foreground transition-colors">Clínicas</a>
-          <a href="#beneficios" class="text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
+          <a href={ANCHORS.FEATURES} class="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
+          <a href={ANCHORS.CLINICS} class="text-muted-foreground hover:text-foreground transition-colors">Clínicas</a>
+          <a href={ANCHORS.BENEFITS} class="text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
         </nav>
         <div class="flex items-center gap-3">
-          <a href="/admin" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+          <a href={ROUTES.APP_URL} class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
             Iniciar Sesión
           </a>
-          <a href="/reservar" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          <a href={ROUTES.BOOKING} class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
             Prueba Gratis
           </a>
         </div>
@@ -39,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            Software de gestión para clínicas
+            {APP_INFO.DESCRIPTION}
           </div>
           <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Gestiona tu clínica de forma{" "}
@@ -50,18 +51,18 @@ import Layout from '../layouts/Layout.astro';
             Agenda citas, gestiona fichas clínicas y optimiza tu práctica.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/reservar" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-base">
+            <a href={ROUTES.BOOKING} class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-base">
               Comenzar Gratis
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#features" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 text-base">
+            <a href={ANCHORS.FEATURES} class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 text-base">
               Ver Funcionalidades
             </a>
           </div>
           <p class="text-sm text-muted-foreground mt-4">
-            Sin tarjeta de crédito • Prueba gratuita de 14 días
+            Sin tarjeta de crédito • Prueba gratuita de {APP_CONFIG.TRIAL_DAYS} días
           </p>
         </div>
       </div>
@@ -302,13 +303,13 @@ import Layout from '../layouts/Layout.astro';
               transformar la gestión de tu práctica.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/reservar" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 text-base">
+              <a href={ROUTES.BOOKING} class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 text-base">
                 Comenzar Prueba Gratis
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="/admin" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 h-11 px-8 text-base">
+              <a href={ROUTES.ADMIN} class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 h-11 px-8 text-base">
                 Ver Demo
               </a>
             </div>
@@ -327,10 +328,10 @@ import Layout from '../layouts/Layout.astro';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <span class="font-semibold text-foreground">MedBooq</span>
+            <span class="font-semibold text-foreground">{APP_INFO.NAME}</span>
           </div>
           <div class="text-muted-foreground text-sm">
-            © 2024 MedBooq. Todos los derechos reservados.
+            © 2024 {APP_INFO.NAME}. Todos los derechos reservados.
           </div>
         </div>
       </div>
