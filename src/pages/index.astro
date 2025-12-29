@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="MedBooq - Software de gestión para clínicas">
+  <div class="min-h-screen bg-background">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <span class="text-xl font-semibold text-foreground">MedBooq</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
+          <a href="#clinicas" class="text-muted-foreground hover:text-foreground transition-colors">Clínicas</a>
+          <a href="#beneficios" class="text-muted-foreground hover:text-foreground transition-colors">Beneficios</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="/admin" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+            Iniciar Sesión
+          </a>
+          <a href="/reservar" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+            Prueba Gratis
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+      <div class="container mx-auto">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            Software de gestión para clínicas
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            Gestiona tu clínica de forma{" "}
+            <span class="text-primary">simple y eficiente</span>
+          </h1>
+          <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            La plataforma todo-en-uno para clínicas dentales, médicas y estéticas. 
+            Agenda citas, gestiona fichas clínicas y optimiza tu práctica.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/reservar" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-base">
+              Comenzar Gratis
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#features" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 text-base">
+              Ver Funcionalidades
+            </a>
+          </div>
+          <p class="text-sm text-muted-foreground mt-4">
+            Sin tarjeta de crédito • Prueba gratuita de 14 días
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 px-4 border-y border-border bg-muted/30">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          <div>
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-1">500+</div>
+            <div class="text-sm text-muted-foreground">Clínicas activas</div>
+          </div>
+          <div>
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-1">50k+</div>
+            <div class="text-sm text-muted-foreground">Citas gestionadas</div>
+          </div>
+          <div>
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-1">99.9%</div>
+            <div class="text-sm text-muted-foreground">Uptime garantizado</div>
+          </div>
+          <div>
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-1">4.9★</div>
+            <div class="text-sm text-muted-foreground">Satisfacción</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Todo lo que necesitas para tu clínica
+          </h2>
+          <p class="text-muted-foreground max-w-xl mx-auto">
+            Herramientas diseñadas específicamente para profesionales de la salud.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Gestión de Citas -->
+          <div class="group rounded-lg border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="p-8">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-3">Gestión de Citas</h3>
+              <p class="text-muted-foreground leading-relaxed">Agenda y reservas online para tus pacientes. Recordatorios automáticos y sincronización de calendarios.</p>
+            </div>
+          </div>
+
+          <!-- Ficha Clínica Digital -->
+          <div class="group rounded-lg border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="p-8">
+              <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-3">Ficha Clínica Digital</h3>
+              <p class="text-muted-foreground leading-relaxed">Historial médico completo, odontograma, mapa facial y registros de tratamientos en un solo lugar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinic Types Section -->
+    <section id="clinicas" class="py-20 px-4 bg-muted/50">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Diseñado para todo tipo de clínicas
+          </h2>
+          <p class="text-muted-foreground max-w-xl mx-auto">
+            Funcionalidades especializadas según tu tipo de práctica.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Clínicas Dentales -->
+          <div class="group rounded-lg border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center">
+            <div class="p-8">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 mx-auto group-hover:bg-primary/20 transition-colors">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-3">Clínicas Dentales</h3>
+              <p class="text-muted-foreground">Odontograma digital, historial dental y seguimiento de tratamientos.</p>
+            </div>
+          </div>
+
+          <!-- Clínicas Médicas -->
+          <div class="group rounded-lg border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center">
+            <div class="p-8">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 mx-auto group-hover:bg-primary/20 transition-colors">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-3">Clínicas Médicas</h3>
+              <p class="text-muted-foreground">Ficha médica completa, recetas y derivaciones integradas.</p>
+            </div>
+          </div>
+
+          <!-- Clínicas Estéticas -->
+          <div class="group rounded-lg border border-border/50 bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center">
+            <div class="p-8">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 mx-auto group-hover:bg-primary/20 transition-colors">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-3">Clínicas Estéticas</h3>
+              <p class="text-muted-foreground">Mapa facial interactivo, seguimiento de procedimientos y fotografías.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-20 px-4">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Transforma la gestión de tu clínica
+            </h2>
+            <p class="text-muted-foreground mb-8 text-lg">
+              Únete a cientos de clínicas que ya optimizaron su práctica con MedBooq.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Ahorra tiempo automatizando tareas administrativas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Reduce las ausencias con recordatorios automáticos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Accede a la información desde cualquier dispositivo</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Mejora la experiencia de tus pacientes</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Datos seguros y respaldados en la nube</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-foreground">Soporte técnico dedicado</span>
+              </li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Multi-usuario -->
+            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm p-6 text-center">
+              <svg class="w-10 h-10 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <div class="text-2xl font-bold text-foreground">Multi-usuario</div>
+              <div class="text-sm text-muted-foreground">Equipos ilimitados</div>
+            </div>
+
+            <!-- Reportes -->
+            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm p-6 text-center">
+              <svg class="w-10 h-10 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              <div class="text-2xl font-bold text-foreground">Reportes</div>
+              <div class="text-sm text-muted-foreground">Estadísticas en tiempo real</div>
+            </div>
+
+            <!-- Agenda -->
+            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm p-6 text-center">
+              <svg class="w-10 h-10 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <div class="text-2xl font-bold text-foreground">Agenda</div>
+              <div class="text-sm text-muted-foreground">Reservas 24/7</div>
+            </div>
+
+            <!-- Seguro -->
+            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm p-6 text-center">
+              <svg class="w-10 h-10 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <div class="text-2xl font-bold text-foreground">Seguro</div>
+              <div class="text-sm text-muted-foreground">Datos encriptados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4">
+      <div class="container mx-auto">
+        <div class="rounded-lg border border-border bg-primary text-primary-foreground overflow-hidden shadow-sm">
+          <div class="p-8 md:p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              ¿Listo para modernizar tu clínica?
+            </h2>
+            <p class="text-primary-foreground/80 mb-8 text-lg max-w-2xl mx-auto">
+              Comienza tu prueba gratuita hoy y descubre cómo MedBooq puede 
+              transformar la gestión de tu práctica.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/reservar" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 text-base">
+                Comenzar Prueba Gratis
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="/admin" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 h-11 px-8 text-base">
+                Ver Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-border">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <span class="font-semibold text-foreground">MedBooq</span>
+          </div>
+          <div class="text-muted-foreground text-sm">
+            © 2024 MedBooq. Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
