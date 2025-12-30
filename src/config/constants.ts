@@ -5,7 +5,7 @@
 
 // URLs y rutas de la aplicación
 export const ROUTES = {
-  APP_URL: 'https://app.medbooq.com',
+  APP_URL: 'https://app.medbooq.com/users/sign_in',
   ADMIN_URL: 'https://app.medbooq.com/admin',
   // Agrega más rutas según sea necesario
 } as const;
